@@ -1,20 +1,11 @@
-import logo from "./doomsday_logo.png";
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
 
-const HomePage = () => {
+const PracticePage = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <a
-          className="Info-link"
-          href="https://en.wikipedia.org/wiki/Doomsday_rule"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img src={logo} className="App-logo" alt="logo" />
-        </a>
-        <p>Become a human calendar</p>
+        <p>Practice all the things</p>
         <a href="learn" style={{ textDecoration: "none" }}>
           <Tooltip title="Learn the theory" placement="right">
             <Button
@@ -38,4 +29,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default PracticePage;

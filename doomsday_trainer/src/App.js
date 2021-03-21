@@ -1,7 +1,48 @@
 import HomePage from "./HomePage";
+import LearnSections from "./LearnSections";
+import PracticePage from "./PracticePage";
+import AppBar from "@material-ui/core/AppBar";
+import Toolbar from "@material-ui/core/Toolbar";
+import IconButton from "@material-ui/core/IconButton";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
 
 function App() {
-  return <HomePage />;
+  const fullPath = window.location.href;
+  const relativePath = fullPath.replace(/^(?:\/\/|[^/]+)*\//, "");
+
+  return (
+    <div>
+      {!(relativePath === "" || relativePath === "/") && (
+        <AppBar position="static">
+          <Toolbar>
+            <IconButton
+              edge="start"
+              color="inherit"
+              aria-label="menu"
+            ></IconButton>
+            News
+          </Toolbar>
+        </AppBar>
+      )}
+      <Router>
+        {/* A <Switch> looks through its children <Route>s and
+          renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/learn">
+            <LearnSections />
+          </Route>
+          <Route path="/practice">
+            <PracticePage />
+          </Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
