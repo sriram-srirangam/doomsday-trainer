@@ -2,7 +2,7 @@ import ControlledCarousel from "./ControlledCarousel";
 
 const Step5Page = () => {
   return (
-    <div className="General-app-content">
+    <div className="General-app-content App-page-with-bar">
       <ControlledCarousel />
     </div>
   );
