@@ -16,7 +16,7 @@ const LearnSections = () => {
           <Step5Page />
         </Route>
         <Route path={match.path}>
-          <TableOfContents />
+          <TableOfContents className="App-page-with-bar" />
         </Route>
       </Switch>
     </Router>

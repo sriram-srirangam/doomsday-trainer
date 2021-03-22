@@ -1,7 +1,7 @@
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
 
-const PracticePage = () => {
+const TrainPage = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -17,10 +17,10 @@ const PracticePage = () => {
             </Button>
           </Tooltip>
         </a>
-        <a href="practice" style={{ textDecoration: "none" }}>
+        <a href="train" style={{ textDecoration: "none" }}>
           <Tooltip title="Practice the Algorithm" placement="right">
             <Button variant="outlined" size="large">
-              Practice
+              Train
             </Button>
           </Tooltip>
         </a>
@@ -29,4 +29,4 @@ const PracticePage = () => {
   );
 };
 
-export default PracticePage;
+export default TrainPage;

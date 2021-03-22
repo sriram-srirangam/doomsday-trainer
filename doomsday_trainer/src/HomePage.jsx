@@ -26,10 +26,10 @@ const HomePage = () => {
             </Button>
           </Tooltip>
         </a>
-        <a href="practice" style={{ textDecoration: "none" }}>
+        <a href="train" style={{ textDecoration: "none" }}>
           <Tooltip title="Practice the Algorithm" placement="right">
             <Button variant="outlined" size="large">
-              Practice
+              Train
             </Button>
           </Tooltip>
         </a>

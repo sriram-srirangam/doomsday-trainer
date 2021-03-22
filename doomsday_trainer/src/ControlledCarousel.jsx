@@ -1,7 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
 import { useState } from "react";
 import testImage from "./test_img.png";
-import { Paper } from "@material-ui/core";
 
 const ControlledCarousel = () => {
   const [index, setIndex] = useState(0);

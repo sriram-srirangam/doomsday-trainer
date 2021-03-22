@@ -1,6 +1,7 @@
+import logo from "./doomsday_logo.png";
 import HomePage from "./HomePage";
 import LearnSections from "./LearnSections";
-import PracticePage from "./PracticePage";
+import TrainPage from "./TrainPage";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -22,7 +23,9 @@ function App() {
               color="inherit"
               aria-label="menu"
             ></IconButton>
-            News
+            <a className="Info-link" href="/">
+              <img src={logo} width="203px" height="35px" alt="logo" />
+            </a>
           </Toolbar>
         </AppBar>
       )}
@@ -33,8 +36,8 @@ function App() {
           <Route path="/learn">
             <LearnSections />
           </Route>
-          <Route path="/practice">
-            <PracticePage />
+          <Route path="/train">
+            <TrainPage />
           </Route>
           <Route path="/">
             <HomePage />

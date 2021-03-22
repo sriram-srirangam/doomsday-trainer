@@ -37,6 +37,10 @@
   color: white;
 }
 
+.App-page-with-bar {
+  min-height: "calc(100vh - 64px)";
+}
+
 .App-link {
   color: #61dafb;
 }
