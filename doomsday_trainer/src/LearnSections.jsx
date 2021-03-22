@@ -25,7 +25,7 @@ const LearnSections = () => {
 
 const TableOfContents = () => {
   return (
-    <div className="General-app-content">
+    <div className="General-app-content App-page-with-bar">
       <h1>Learn the steps of the algorithm</h1>
       <ul>
         <li>

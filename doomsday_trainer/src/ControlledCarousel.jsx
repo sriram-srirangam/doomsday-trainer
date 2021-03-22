@@ -17,7 +17,7 @@ const ControlledCarousel = () => {
           style={{ width: "100vw", height: "calc(100vh - 64px)" }}
           alt="First slide"
         />
-        <Carousel.Caption style={{ color: "red" }}>
+        <Carousel.Caption>
           <h3>First slide label</h3>
           <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </Carousel.Caption>

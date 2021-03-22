@@ -28,7 +28,6 @@
 
 .General-app-content {
   background-color: gray;
-  /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,8 +37,7 @@
 }
 
 .App-page-with-bar {
-  min-height: "calc(100vh - 64px)";
-  max-height: "calc(100vh - 64px)";
+  height: calc(100vh - 64px);
 }
 
 .App-link {

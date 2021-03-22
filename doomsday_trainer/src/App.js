@@ -17,7 +17,7 @@ function App() {
     <div>
       {!(relativePath === "" || relativePath === "/") && (
         <AppBar position="static">
-          <Toolbar>
+          <Toolbar style={{ background: "DimGray" }}>
             <IconButton
               edge="start"
               color="inherit"

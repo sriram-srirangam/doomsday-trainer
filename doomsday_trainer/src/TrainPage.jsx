@@ -1,31 +1,49 @@
 import { useState } from "react";
 import Button from "@material-ui/core/Button";
-import Tooltip from "@material-ui/core/Tooltip";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 const TrainPage = () => {
   const date = getRandDate();
   const day = computeDayOfWeek(...date);
-  const [count, setCount] = useState(0);
+  const [state, setState] = useState({ date: date, day: day });
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Practice all the things</p>
-        <p>
-          Date is {date[0]}/{date[1]}/{date[2]}
-        </p>
-        <p>Day is {day}</p>
-      </header>
+    <div className="General-app-content App-page-with-bar">
+      <p>Practice makes perfect</p>
+      <p>
+        Date: {date[0]}/{date[1]}/{date[2]}
+      </p>
+
+      <ButtonGroup
+        color="gray"
+        orientation="vertical"
+        aria-label="outlined primary button group"
+        onClick={() => {
+          alert(`The answer is: ${day}`);
+
+          const newDate = getRandDate();
+          const newDay = computeDayOfWeek(...newDate);
+          setState({ date: newDate, day: newDay });
+        }}
+      >
+        <Button>Monday</Button>
+        <Button>Tuesday</Button>
+        <Button>Wednesday</Button>
+        <Button>Thursday</Button>
+        <Button>Friday</Button>
+        <Button>Saturday</Button>
+        <Button>Sunday</Button>
+      </ButtonGroup>
     </div>
   );
 };
 
-const isLeapYear = (year) => {
-  return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
-};
-
 const randInt = (lower, upper) => {
   return Math.floor(Math.random() * (upper - lower)) + lower;
+};
+
+const isLeapYear = (year) => {
+  return year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
 };
 
 const getRandDate = () => {
