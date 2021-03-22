@@ -5,7 +5,7 @@ import ButtonGroup from "@material-ui/core/ButtonGroup";
 const TrainPage = () => {
   const date = getRandDate();
   const day = computeDayOfWeek(...date);
-  const [state, setState] = useState({ date: date, day: day });
+  const [, setState] = useState({ date: date, day: day });
 
   return (
     <div className="General-app-content App-page-with-bar">
