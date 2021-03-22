@@ -39,6 +39,7 @@
 
 .App-page-with-bar {
   min-height: "calc(100vh - 64px)";
+  max-height: "calc(100vh - 64px)";
 }
 
 .App-link {
