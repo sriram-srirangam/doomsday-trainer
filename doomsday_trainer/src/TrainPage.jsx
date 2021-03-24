@@ -3,9 +3,8 @@ import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 const TrainPage = () => {
-  const date = getRandDate();
-  const day = computeDayOfWeek(...date);
-  const [, setState] = useState({ date: date, day: day });
+  const [date, setDate] = useState(getRandDate());
+  const [day, setDay] = useState(computeDayOfWeek(...date));
 
   return (
     <div className="General-app-content App-page-with-bar">
@@ -22,8 +21,8 @@ const TrainPage = () => {
           alert(`The answer is: ${day}`);
 
           const newDate = getRandDate();
-          const newDay = computeDayOfWeek(...newDate);
-          setState({ date: newDate, day: newDay });
+          setDate(newDate);
+          setDay(computeDayOfWeek(...newDate));
         }}
       >
         <Button>Monday</Button>
