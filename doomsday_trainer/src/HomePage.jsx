@@ -1,6 +1,7 @@
 import logo from "./doomsday_logo.png";
 import Button from "@material-ui/core/Button";
 import Tooltip from "@material-ui/core/Tooltip";
+import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
 
 const HomePage = () => {
   return (
@@ -31,6 +32,19 @@ const HomePage = () => {
             <Button variant="outlined" size="large">
               Train
             </Button>
+          </Tooltip>
+        </a>
+        <a href="about" style={{ textDecoration: "none" }}>
+          <Tooltip title="About" placement="right">
+            <HelpOutlineIcon
+              fontSize="large"
+              style={{
+                position: "fixed",
+                bottom: 20,
+                right: 20,
+                color: "black",
+              }}
+            />
           </Tooltip>
         </a>
       </header>

@@ -39,6 +39,9 @@ function App() {
           <Route path="/train">
             <TrainPage />
           </Route>
+          <Route path="/about">
+            <LearnSections />
+          </Route>
           <Route path="/">
             <HomePage />
           </Route>
