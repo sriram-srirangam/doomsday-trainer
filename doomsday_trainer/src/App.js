@@ -2,6 +2,7 @@ import logo from "./doomsday_logo.png";
 import HomePage from "./HomePage";
 import LearnSections from "./LearnSections";
 import TrainPage from "./TrainPage";
+import AboutPage from "./AboutPage";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
@@ -40,7 +41,7 @@ function App() {
             <TrainPage />
           </Route>
           <Route path="/about">
-            <LearnSections />
+            <AboutPage />
           </Route>
           <Route path="/">
             <HomePage />

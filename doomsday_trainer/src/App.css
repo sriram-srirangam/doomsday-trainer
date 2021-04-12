@@ -36,6 +36,16 @@
   color: white;
 }
 
+.General-app-text-content {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
 .App-page-with-bar {
   height: calc(100vh - 64px);
 }
