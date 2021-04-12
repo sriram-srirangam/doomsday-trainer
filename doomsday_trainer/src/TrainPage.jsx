@@ -4,7 +4,17 @@ import ButtonGroup from "@material-ui/core/ButtonGroup";
 
 const TrainPage = () => {
   const [date, setDate] = useState(getRandDate());
-  const [day, setDay] = useState(computeDayOfWeek(...date));
+  const [score, setScore] = useState(0);
+  const [highScore, setHighScore] = useState(0);
+  const allDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   return (
     <div className="General-app-content App-page-with-bar">
@@ -17,22 +27,52 @@ const TrainPage = () => {
         color="gray"
         orientation="vertical"
         aria-label="outlined primary button group"
-        onClick={() => {
-          alert(`The answer is: ${day}`);
+      >
+        {allDays.map((dayOfWeek) => (
+          <Button
+            onClick={() => {
+              const day = computeDayOfWeek(...date);
+              if (dayOfWeek === day) {
+                const newScore = score + 1;
 
-          const newDate = getRandDate();
-          setDate(newDate);
-          setDay(computeDayOfWeek(...newDate));
+                if (newScore > highScore) {
+                  setHighScore(newScore);
+                }
+
+                setScore(newScore);
+
+                alert("CORRECT!");
+              } else {
+                setScore(0);
+                alert(`INCORRECT!\nThe correct answer is: ${day}.`);
+              }
+
+              const newDate = getRandDate();
+              setDate(newDate);
+            }}
+          >
+            {dayOfWeek}
+          </Button>
+        ))}
+      </ButtonGroup>
+      <p
+        style={{
+          position: "fixed",
+          bottom: 30,
+          right: 30,
         }}
       >
-        <Button>Monday</Button>
-        <Button>Tuesday</Button>
-        <Button>Wednesday</Button>
-        <Button>Thursday</Button>
-        <Button>Friday</Button>
-        <Button>Saturday</Button>
-        <Button>Sunday</Button>
-      </ButtonGroup>
+        SCORE: {score}
+      </p>
+      <p
+        style={{
+          position: "fixed",
+          bottom: 0,
+          right: 30,
+        }}
+      >
+        HIGH SCORE: {highScore}
+      </p>
     </div>
   );
 };

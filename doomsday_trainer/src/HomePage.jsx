@@ -35,7 +35,7 @@ const HomePage = () => {
           </Tooltip>
         </a>
         <a href="about" style={{ textDecoration: "none" }}>
-          <Tooltip title="About" placement="right">
+          <Tooltip title="About" placement="left">
             <HelpOutlineIcon
               fontSize="large"
               style={{

@@ -52,6 +52,11 @@
   margin-right: 50px;
 }
 
+.Slide-paragraph-block {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 .App-page-with-bar {
   height: calc(100vh - 64px);
 }
