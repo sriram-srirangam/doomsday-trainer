@@ -6,6 +6,7 @@ import {
   useRouteMatch,
 } from "react-router-dom";
 import Step1Page from "./Step1Page";
+import Step2Page from "./Step2Page";
 
 const LearnSections = () => {
   let match = useRouteMatch();
@@ -14,6 +15,9 @@ const LearnSections = () => {
       <Switch>
         <Route path={`${match.path}/step1`}>
           <Step1Page />
+        </Route>
+        <Route path={`${match.path}/step2`}>
+          <Step2Page />
         </Route>
         <Route path={match.path}>
           <TableOfContents className="App-page-with-bar" />
@@ -30,44 +34,30 @@ const TableOfContents = () => {
       <ol>
         <li>
           <strong>
-            Use the Doomsday to calculate the day of the week for the given
-            month & day
+            Part 1: Use the Doomsday to calculate the day of the week for the
+            given month & day
           </strong>
           <ul>
+            <LinkListItem text="Doomsdays" urlPath="step1" />
             <LinkListItem
-              text="Memorize 12 Doomsday dates within a year, one for each month"
-              urlPath="step1"
+              text="Modular Arithmetic with Dates"
+              urlPath="step2"
             />
             <LinkListItem
-              text="Find the closest Doomsday date to the given date and calculate the
-              difference in days"
-              urlPath="step6"
-            />
-            <LinkListItem
-              text="Add the day difference to the Doomsday found in the previous step"
-              urlPath="step7"
+              text="Calculate the day of the week"
+              urlPath="step3"
             />
           </ul>
         </li>
         <li>
-          <strong>Compute the Doomsday for the year in the given date</strong>
+          <strong>
+            Part 2: Compute the Doomsday for the year in the given date
+          </strong>
           <ul>
-            <LinkListItem
-              text="Memorize anchor Doomsdays for four consecutive century years"
-              urlPath="step1"
-            />
-            <LinkListItem
-              text="Calculate the offset within the century for the given date"
-              urlPath="step2"
-            />
-            <LinkListItem
-              text="Find the remainder of the offset modulo 7"
-              urlPath="step3"
-            />
-            <LinkListItem
-              text="Add the remainder to the relevant anchor Doomsday"
-              urlPath="step4"
-            />
+            <LinkListItem text="TODO" urlPath="step4" />
+            <LinkListItem text="TODO" urlPath="step5" />
+            <LinkListItem text="TODO" urlPath="step6" />
+            <LinkListItem text="TODO" urlPath="step7" />
           </ul>
         </li>
       </ol>
