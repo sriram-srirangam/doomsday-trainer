@@ -1,5 +1,11 @@
 import { useEffect, useState } from "react";
+import Input from "@material-ui/core/Input";
+import TextField from "@material-ui/core/TextField";
 import Tooltip from "@material-ui/core/Tooltip";
+
+import Calendar from "react-calendar";
+
+import { getDoomsdays } from "../utils.js";
 
 const Slides = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -7,6 +13,21 @@ const Slides = () => {
   useEffect(() => {
     showSlides(slideIndex);
   });
+
+  const allMonths = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
 
   const showSlides = (n) => {
     var i;
@@ -68,7 +89,7 @@ const Slides = () => {
                 rel="noopener noreferrer"
               >
                 {" "}
-                mnemonics.{" "}
+                mnemonics.
               </a>
             </p>
           </div>
@@ -151,8 +172,56 @@ const Slides = () => {
         </div>
 
         <div className="mySlides">
-          <q>I have not failed. I've just found 10,000 ways that won't work.</q>
-          <p className="author">- Thomas A. Edison</p>
+          <div className="Slide-paragraph-block">
+            <h2 style={{ color: "black" }}>
+              <b>
+                <u>Doomsdays</u>
+              </b>
+            </h2>
+            <p>
+              {" "}
+              Note that the doomsdays always fall on the same day of the week
+              for any given year:{" "}
+            </p>
+            <Calendar
+              minDate={new Date(1700, 0, 1)}
+              view="month"
+              showNeighboringMonth={false}
+              tileDisabled={({ activeStartDate, date, view }) => {
+                const doomsdays = getDoomsdays(date.getFullYear());
+                return !(doomsdays[date.getMonth()] === date.getDate());
+              }}
+            />
+          </div>
+        </div>
+
+        <div className="mySlides">
+          <div className="Slide-paragraph-block">
+            <h2 style={{ color: "black" }}>
+              <b>
+                <u>Quiz</u>
+              </b>
+            </h2>
+            <p>
+              {" "}
+              Enter the date of the memorized doomsday in each month for leap
+              years.{" "}
+            </p>
+            {allMonths.map((month, index) => {
+              const doomsdays = getDoomsdays();
+              return (
+                <span>
+                  <TextField
+                    label={month}
+                    // error
+                    onChange={(e) => {}}
+                    id={month}
+                    variant="outlined"
+                  />{" "}
+                </span>
+              );
+            })}
+          </div>
         </div>
 
         <div
@@ -163,7 +232,7 @@ const Slides = () => {
         </div>
         <div
           className="next"
-          onClick={() => setSlideIndex(Math.min(slideIndex + 1, 2))}
+          onClick={() => setSlideIndex(Math.min(slideIndex + 1, 3))}
         >
           ❯
         </div>
@@ -173,6 +242,7 @@ const Slides = () => {
         <span className="dot" onClick={() => setSlideIndex(0)}></span>
         <span className="dot" onClick={() => setSlideIndex(1)}></span>
         <span className="dot" onClick={() => setSlideIndex(2)}></span>
+        <span className="dot" onClick={() => setSlideIndex(3)}></span>
       </div>
     </div>
   );
