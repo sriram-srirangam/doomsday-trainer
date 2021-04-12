@@ -9,6 +9,21 @@ import { getDoomsdays } from "../utils.js";
 
 const Slides = () => {
   const [slideIndex, setSlideIndex] = useState(0);
+  const [test, setTest] = useState("");
+  const [quizFieldValues, setQuizFieldValues] = useState([
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+  ]);
 
   useEffect(() => {
     showSlides(slideIndex);
@@ -208,13 +223,22 @@ const Slides = () => {
               years.{" "}
             </p>
             {allMonths.map((month, index) => {
-              const doomsdays = getDoomsdays();
+              const doomsdays = getDoomsdays(2020);
               return (
                 <span>
                   <TextField
                     label={month}
-                    // error
-                    onChange={(e) => {}}
+                    error={
+                      quizFieldValues[index] !== "" &&
+                      quizFieldValues[index] !== doomsdays[index].toString()
+                    }
+                    onChange={(e) => {
+                      var newQuizFieldValues = quizFieldValues;
+                      newQuizFieldValues[index] = e.target.value;
+
+                      setQuizFieldValues(newQuizFieldValues);
+                      setTest(e.target.value);
+                    }}
                     id={month}
                     variant="outlined"
                   />{" "}

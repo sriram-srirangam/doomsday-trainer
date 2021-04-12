@@ -5,15 +5,15 @@ import {
   Link,
   useRouteMatch,
 } from "react-router-dom";
-import Step5Page from "./Step5Page";
+import Step1Page from "./Step1Page";
 
 const LearnSections = () => {
   let match = useRouteMatch();
   return (
     <Router>
       <Switch>
-        <Route path={`${match.path}/step5`}>
-          <Step5Page />
+        <Route path={`${match.path}/step1`}>
+          <Step1Page />
         </Route>
         <Route path={match.path}>
           <TableOfContents className="App-page-with-bar" />
@@ -26,8 +26,29 @@ const LearnSections = () => {
 const TableOfContents = () => {
   return (
     <div className="General-app-content App-page-with-bar">
-      <h1>Learn the steps of the algorithm</h1>
-      <ul>
+      <h1>Sections</h1>
+      <ol>
+        <li>
+          <strong>
+            Use the Doomsday to calculate the day of the week for the given
+            month & day
+          </strong>
+          <ul>
+            <LinkListItem
+              text="Memorize 12 Doomsday dates within a year, one for each month"
+              urlPath="step1"
+            />
+            <LinkListItem
+              text="Find the closest Doomsday date to the given date and calculate the
+              difference in days"
+              urlPath="step6"
+            />
+            <LinkListItem
+              text="Add the day difference to the Doomsday found in the previous step"
+              urlPath="step7"
+            />
+          </ul>
+        </li>
         <li>
           <strong>Compute the Doomsday for the year in the given date</strong>
           <ul>
@@ -49,28 +70,7 @@ const TableOfContents = () => {
             />
           </ul>
         </li>
-        <li>
-          <strong>
-            Use the Doomsday to calculate the day of the week for the given
-            month & day
-          </strong>
-          <ul>
-            <LinkListItem
-              text="Memorize 12 Doomsday dates within a year, one for each month"
-              urlPath="step5"
-            />
-            <LinkListItem
-              text="Find the closest Doomsday date to the given date and calculate the
-              difference in days"
-              urlPath="step6"
-            />
-            <LinkListItem
-              text="Add the day difference to the Doomsday found in the previous step"
-              urlPath="step7"
-            />
-          </ul>
-        </li>
-      </ul>
+      </ol>
     </div>
   );
 };
