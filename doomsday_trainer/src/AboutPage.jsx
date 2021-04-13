@@ -24,10 +24,10 @@ const AboutPage = () => {
         <p>
           {" "}
           The 'Train' mode of the application offers practice problems for
-          training the ability to perform the entire algorithm, along with
-          various metrics such as scorekeeping, average response time, etc.
-          Returning users who have already completed the previous mode will want
-          to go here.{" "}
+          training the ability to perform the entire algorithm, as well as
+          providing various metrics such as scorekeeping, average response time,
+          etc. Returning users who have already completed the previous mode will
+          want to go here.{" "}
         </p>
       </div>
     </div>

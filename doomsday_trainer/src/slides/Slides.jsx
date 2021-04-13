@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Input from "@material-ui/core/Input";
 import TextField from "@material-ui/core/TextField";
 import Tooltip from "@material-ui/core/Tooltip";
 
@@ -77,12 +76,16 @@ const Slides = () => {
             </p>
             <p>
               {" "}
-              This day is defined as the day of the week that the last day of
-              February falls on.{" "}
+              This day is defined as being the day of the week that the last day
+              of February falls on.{" "}
             </p>
             <p>
               For example, the Doomsday for 2021 is Sunday (since February 28th,
               2021 was a Sunday).
+            </p>
+            <p>
+              Similarly, the Doomsday for 2020 is Saturday (since February 29th,
+              2020 was a Saturday).
             </p>
             <p>
               We can think of other days where the day of the week matches the
@@ -231,6 +234,12 @@ const Slides = () => {
                     error={
                       quizFieldValues[index] !== "" &&
                       quizFieldValues[index] !== doomsdays[index].toString()
+                    }
+                    helperText={
+                      quizFieldValues[index] !== "" &&
+                      quizFieldValues[index] !== doomsdays[index].toString()
+                        ? "Incorrect answer."
+                        : ""
                     }
                     onChange={(e) => {
                       var newQuizFieldValues = quizFieldValues;

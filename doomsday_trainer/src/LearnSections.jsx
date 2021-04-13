@@ -44,8 +44,12 @@ const TableOfContents = () => {
               urlPath="step2"
             />
             <LinkListItem
-              text="Calculate the day of the week"
+              text="Calculate the day of the week given Doomsday"
               urlPath="step3"
+            />
+            <LinkListItem
+              text="Calculate the day of the week given any reference date"
+              urlPath="step4"
             />
           </ul>
         </li>
@@ -54,10 +58,10 @@ const TableOfContents = () => {
             Part 2: Compute the Doomsday for the year in the given date
           </strong>
           <ul>
-            <LinkListItem text="TODO" urlPath="step4" />
             <LinkListItem text="TODO" urlPath="step5" />
             <LinkListItem text="TODO" urlPath="step6" />
             <LinkListItem text="TODO" urlPath="step7" />
+            <LinkListItem text="TODO" urlPath="step8" />
           </ul>
         </li>
       </ol>
