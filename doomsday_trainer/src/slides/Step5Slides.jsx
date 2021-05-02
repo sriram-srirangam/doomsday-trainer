@@ -74,17 +74,21 @@ const Step5Slides = () => {
             <p>
               {" "}
               Just as Doomsday can be used to calculate other dates, any
-              reference date in a year can be used to calculate Doomsday as well
+              reference date in a year can also be used to calculate the
+              Doomsday for that year as well
             </p>
             <p>
-              For example: given that December 25th, 2012 was a Tuesday, what
-              was Doomsday for 2012?
+              For example: given that January 17th, 2012 was a Tuesday, what was
+              Doomsday for 2012?
             </p>
             <p style={{ textIndent: "50px" }}>
-              The memorized doomsday in December is{" "}
-              <Tooltip title="4/4, 6/6, 8/8, 10/10, 12/12" placement="right">
+              The memorized doomsday in January is{" "}
+              <Tooltip
+                title="the 3rd 3 years in 4 and the 4th in the 4th (note that 2012 is a leap year)"
+                placement="right"
+              >
                 <span>
-                  <u>December 12th</u>
+                  <u>January 4th</u>
                 </span>
               </Tooltip>
             </p>
