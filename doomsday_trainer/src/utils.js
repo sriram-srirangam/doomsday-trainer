@@ -57,3 +57,13 @@ export const getDoomsdays = (year) => {
     12,
   ];
 };
+
+export const allDays = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];

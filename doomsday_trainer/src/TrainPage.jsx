@@ -2,28 +2,26 @@ import { useState } from "react";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 
-import { getRandDate, computeDayOfWeek } from "./utils.js";
+import { getRandDate, computeDayOfWeek, allDays } from "./utils.js";
 
 const TrainPage = () => {
   const [date, setDate] = useState(getRandDate());
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
-  const allDays = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
+
+  const addLeadingZero = (dayOrMonth) =>
+    dayOrMonth < 10 ? `0${dayOrMonth}` : `${dayOrMonth}`;
 
   return (
     <div className="General-app-content App-page-with-bar">
-      {/* <p>Practice makes perfect</p> */}
+      <h4 style={{ color: "black" }}>
+        <b>
+          <u>Practice makes perfect</u>
+        </b>
+      </h4>
       <p>Dates are of the format: MM/DD/YYYY</p>
       <p>
-        Date: {date[0]}/{date[1]}/{date[2]}
+        Date: {addLeadingZero(date[0])}/{addLeadingZero(date[1])}/{date[2]}
       </p>
 
       <ButtonGroup

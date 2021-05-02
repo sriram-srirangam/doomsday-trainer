@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Step1Page from "./Step1Page";
 import Step2Page from "./Step2Page";
+import Step3Page from "./Step3Page";
 
 const LearnSections = () => {
   let match = useRouteMatch();
@@ -18,6 +19,9 @@ const LearnSections = () => {
         </Route>
         <Route path={`${match.path}/step2`}>
           <Step2Page />
+        </Route>
+        <Route path={`${match.path}/step3`}>
+          <Step3Page />
         </Route>
         <Route path={match.path}>
           <TableOfContents className="App-page-with-bar" />
@@ -38,7 +42,7 @@ const TableOfContents = () => {
             <LinkListItem text="Doomsdays" urlPath="step1" />
             <LinkListItem text="Leap Years" urlPath="step2" />
             <LinkListItem
-              text="Modular Arithmetic with Dates"
+              text="Modular Arithmetic with days of the week"
               urlPath="step3"
             />
           </ul>

@@ -72,30 +72,33 @@ const Step1Slides = () => {
               {" "}
               Every year has a specific day of the week, known as{" "}
               <b>Doomsday</b> that can help simplify the way we can think about
-              the calendar.{" "}
+              the calendar{" "}
             </p>
             <p>
               {" "}
               This day is defined as being the day of the week that the last day
-              of February falls on.{" "}
+              of February falls on{" "}
             </p>
-            <p>
-              For example, the Doomsday for 2021 is Sunday (since February 28th,
-              2021 was a Sunday).
+            <p style={{ textIndent: "50px" }}>
+              e.g. the Doomsday for 2021 is Sunday (since February 28th, 2021
+              was a Sunday)
             </p>
-            <p>
-              Similarly, the Doomsday for 2020 is Saturday (since February 29th,
-              2020 was a Saturday).
+            <p style={{ textIndent: "50px" }}>
+              e.g. similarly, the Doomsday for 2020 is Saturday (since February
+              29th, 2020 was a Saturday)
             </p>
             <p>
               We can think of other days where the day of the week matches the
-              Doomsday for a year as also being doomsdays.
+              Doomsday for a year as also being doomsdays
             </p>
-            <p> This means that every Sunday in 2021 is a doomsday. </p>
+            <p style={{ textIndent: "50px" }}>
+              {" "}
+              e.g. this means that every Sunday in 2021 is a doomsday{" "}
+            </p>
             <p>
               {" "}
               We will memorize twelve dates that are guaranteed to be doomsdays
-              in any given year, one in each month.{" "}
+              in any given year, one in each month{" "}
             </p>
             <p>
               {" "}
@@ -107,7 +110,7 @@ const Step1Slides = () => {
                 rel="noopener noreferrer"
               >
                 {" "}
-                mnemonics.
+                mnemonics
               </a>
             </p>
           </div>
