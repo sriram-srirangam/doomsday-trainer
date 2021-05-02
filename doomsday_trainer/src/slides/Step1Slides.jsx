@@ -4,7 +4,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 import Calendar from "react-calendar";
 
-import { getDoomsdays } from "../utils.js";
+import { getDoomsdays, allMonths } from "../utils.js";
 
 const Step1Slides = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -27,21 +27,6 @@ const Step1Slides = () => {
   useEffect(() => {
     showSlides(slideIndex);
   });
-
-  const allMonths = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ];
 
   const showSlides = (n) => {
     var i;
