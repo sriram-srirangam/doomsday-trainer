@@ -4,7 +4,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 import Calendar from "react-calendar";
 
-import { getDoomsdays, isLeapYear } from "../utils.js";
+import { isLeapYear } from "../utils.js";
 
 const Step2Slides = () => {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -28,20 +28,21 @@ const Step2Slides = () => {
     showSlides(slideIndex);
   });
 
-  const allMonths = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
+  const allYears = [
+    1978,
+    1754,
+    1800,
+    2048,
+    2100,
+    1813,
+    2000,
+    1733,
+    1916,
+    2021,
+    1945,
+    2010,
   ];
+  const answers = allYears.map((year) => (isLeapYear(year) ? 29 : 28));
 
   const today = new Date();
   const currentYear = today.getFullYear();
@@ -137,19 +138,19 @@ const Step2Slides = () => {
             <p style={{ textIndent: "50px" }}>
               {" "}
               e.g. The last two digits of{" "}
-              <Tooltip title="1700 = 17 x 100" placement="top">
+              <Tooltip title="1700 = 100 x 17" placement="top">
                 <span>
                   17<u>00</u>
                 </span>
               </Tooltip>
               ,{" "}
-              <Tooltip title="1800 = 18 x 100" placement="top">
+              <Tooltip title="1800 = 100 x 18" placement="top">
                 <span>
                   18<u>00</u>
                 </span>
               </Tooltip>
               ,{" "}
-              <Tooltip title="1900 = 19 x 100" placement="top">
+              <Tooltip title="1900 = 100 x 19" placement="top">
                 <span>
                   19<u>00</u>
                 </span>
@@ -219,22 +220,20 @@ const Step2Slides = () => {
             </h2>
             <p>
               {" "}
-              Enter the date of the memorized doomsday in each month for leap
-              years.{" "}
+              Enter the last day of February for each of the following years:{" "}
             </p>
-            {allMonths.map((month, index) => {
-              const doomsdays = getDoomsdays(2020);
+            {allYears.map((year, index) => {
               return (
                 <span>
                   <TextField
-                    label={month}
+                    label={year}
                     error={
                       quizFieldValues[index] !== "" &&
-                      quizFieldValues[index] !== doomsdays[index].toString()
+                      quizFieldValues[index] !== answers[index].toString()
                     }
                     helperText={
                       quizFieldValues[index] !== "" &&
-                      quizFieldValues[index] !== doomsdays[index].toString()
+                      quizFieldValues[index] !== answers[index].toString()
                         ? "Incorrect answer."
                         : ""
                     }
@@ -245,7 +244,7 @@ const Step2Slides = () => {
                       setQuizFieldValues(newQuizFieldValues);
                       setTest(e.target.value);
                     }}
-                    id={month}
+                    id={year}
                     variant="outlined"
                   />{" "}
                 </span>

@@ -37,6 +37,10 @@ const TableOfContents = () => {
           <ul>
             <LinkListItem text="Doomsdays" urlPath="step1" />
             <LinkListItem text="Leap Years" urlPath="step2" />
+            <LinkListItem
+              text="Modular Arithmetic with Dates"
+              urlPath="step3"
+            />
           </ul>
         </li>
         <li>
@@ -45,10 +49,6 @@ const TableOfContents = () => {
             given month & day
           </strong>
           <ul>
-            <LinkListItem
-              text="Modular Arithmetic with Dates"
-              urlPath="step3"
-            />
             <LinkListItem
               text="Calculate the day of the week given Doomsday"
               urlPath="step4"

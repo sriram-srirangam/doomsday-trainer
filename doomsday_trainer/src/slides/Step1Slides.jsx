@@ -223,7 +223,7 @@ const Step1Slides = () => {
             <p>
               {" "}
               Enter the date of the memorized doomsday in each month for leap
-              years.{" "}
+              years:{" "}
             </p>
             {allMonths.map((month, index) => {
               const doomsdays = getDoomsdays(2020);
