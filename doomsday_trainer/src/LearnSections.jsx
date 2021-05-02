@@ -33,35 +33,41 @@ const TableOfContents = () => {
       <h1>Sections</h1>
       <ol>
         <li>
+          <strong>Part 1: Calendar Basics</strong>
+          <ul>
+            <LinkListItem text="Doomsdays" urlPath="step1" />
+            <LinkListItem text="Leap Years" urlPath="step2" />
+          </ul>
+        </li>
+        <li>
           <strong>
-            Part 1: Use the Doomsday to calculate the day of the week for the
+            Part 2: Use the Doomsday to calculate the day of the week for the
             given month & day
           </strong>
           <ul>
-            <LinkListItem text="Doomsdays" urlPath="step1" />
             <LinkListItem
               text="Modular Arithmetic with Dates"
-              urlPath="step2"
-            />
-            <LinkListItem
-              text="Calculate the day of the week given Doomsday"
               urlPath="step3"
             />
             <LinkListItem
-              text="Calculate the day of the week given any reference date"
+              text="Calculate the day of the week given Doomsday"
               urlPath="step4"
+            />
+            <LinkListItem
+              text="Calculate the day of the week given any reference date"
+              urlPath="step5"
             />
           </ul>
         </li>
         <li>
           <strong>
-            Part 2: Compute the Doomsday for the year in the given date
+            Part 3: Compute the Doomsday for the year in the given date
           </strong>
           <ul>
-            <LinkListItem text="TODO" urlPath="step5" />
             <LinkListItem text="TODO" urlPath="step6" />
             <LinkListItem text="TODO" urlPath="step7" />
             <LinkListItem text="TODO" urlPath="step8" />
+            <LinkListItem text="TODO" urlPath="step9" />
           </ul>
         </li>
       </ol>

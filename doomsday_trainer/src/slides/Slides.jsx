@@ -198,7 +198,7 @@ const Slides = () => {
             </h2>
             <p>
               {" "}
-              Note that the doomsdays always fall on the same day of the week
+              Observe that the doomsdays always fall on the same day of the week
               for any given year:{" "}
             </p>
             <Calendar
