@@ -2,8 +2,6 @@ import { useEffect, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Tooltip from "@material-ui/core/Tooltip";
 
-import Calendar from "react-calendar";
-
 import { allDays } from "../utils.js";
 
 const Step3Slides = () => {

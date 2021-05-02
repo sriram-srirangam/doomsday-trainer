@@ -2,15 +2,17 @@ import { useState } from "react";
 import Button from "@material-ui/core/Button";
 import ButtonGroup from "@material-ui/core/ButtonGroup";
 
-import { getRandDate, computeDayOfWeek, allDays } from "./utils.js";
+import {
+  addLeadingZero,
+  getRandDate,
+  computeDayOfWeek,
+  allDays,
+} from "./utils.js";
 
 const TrainPage = () => {
   const [date, setDate] = useState(getRandDate());
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
-
-  const addLeadingZero = (dayOrMonth) =>
-    dayOrMonth < 10 ? `0${dayOrMonth}` : `${dayOrMonth}`;
 
   return (
     <div className="General-app-content App-page-with-bar">

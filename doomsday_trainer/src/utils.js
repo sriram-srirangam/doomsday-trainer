@@ -58,6 +58,9 @@ export const getDoomsdays = (year) => {
   ];
 };
 
+export const addLeadingZero = (dayOrMonth) =>
+  dayOrMonth < 10 ? `0${dayOrMonth}` : `${dayOrMonth}`;
+
 export const allDays = [
   "Sunday",
   "Monday",
