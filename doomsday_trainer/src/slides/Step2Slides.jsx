@@ -4,9 +4,9 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 import Calendar from "react-calendar";
 
-import { getDoomsdays } from "../utils.js";
+import { getDoomsdays, isLeapYear } from "../utils.js";
 
-const Slides = () => {
+const Step2Slides = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [test, setTest] = useState("");
   const [quizFieldValues, setQuizFieldValues] = useState([
@@ -43,6 +43,9 @@ const Slides = () => {
     "December",
   ];
 
+  const today = new Date();
+  const currentYear = today.getFullYear();
+
   const showSlides = (n) => {
     var i;
     var slides = document.getElementsByClassName("mySlides");
@@ -65,50 +68,34 @@ const Slides = () => {
           <div className="Slide-paragraph-block">
             <h2 style={{ color: "black" }}>
               <b>
-                <u>Doomsdays</u>
+                <u>Leap Years</u>
               </b>
             </h2>
             <p>
               {" "}
-              Every year has a specific day of the week, known as{" "}
-              <b>Doomsday</b> that can help simplify the way we can think about
-              the calendar.{" "}
+              A <b>leap year</b> is a year that is a multiple of 4{" "}
+            </p>
+            <p style={{ textIndent: "50px" }}>
+              {" "}
+              e.g. 2016, 1984, 1836 are leap years
             </p>
             <p>
               {" "}
-              This day is defined as being the day of the week that the last day
-              of February falls on.{" "}
+              ...unless the year is a multiple of 100, in which case it is{" "}
+              <b>not</b> a leap year{" "}
             </p>
-            <p>
-              For example, the Doomsday for 2021 is Sunday (since February 28th,
-              2021 was a Sunday).
-            </p>
-            <p>
-              Similarly, the Doomsday for 2020 is Saturday (since February 29th,
-              2020 was a Saturday).
-            </p>
-            <p>
-              We can think of other days where the day of the week matches the
-              Doomsday for a year as also being doomsdays.
-            </p>
-            <p> This means that every Sunday in 2021 is a doomsday. </p>
-            <p>
+            <p style={{ textIndent: "50px" }}>
               {" "}
-              We will memorize twelve dates that are guaranteed to be doomsdays
-              in any given year, one in each month.{" "}
+              e.g. 1700, 1800, 1900 are not leap years
             </p>
             <p>
               {" "}
-              To help commit them to memory, we will use{" "}
-              <a
-                className="Info-link"
-                href="https://en.wikipedia.org/wiki/Mnemonic"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                mnemonics.
-              </a>
+              ...but if the year is a multiple of 400, it <b>is</b> a leap year
+              after all{" "}
+            </p>
+            <p style={{ textIndent: "50px" }}>
+              {" "}
+              e.g. 2000, 2400, 1600 are leap years
             </p>
           </div>
         </div>
@@ -117,75 +104,84 @@ const Slides = () => {
           <div className="Slide-paragraph-block">
             <h2 style={{ color: "black" }}>
               <b>
-                <u>Memorize the Doomsdays</u>
+                <u>Techniques for determining if a year is leap</u>
               </b>
             </h2>
-            <p> Hover over a date to see a mnemonic to help remember it: </p>
-            <ul>
-              <li>
-                <Tooltip
-                  title="the 3rd 3 years in 4 and the 4th in the 4th"
-                  placement="right"
-                >
-                  <span> January 3rd (or 4th if it's a leap year) </span>
-                </Tooltip>
-              </li>
-              <li>
-                <Tooltip title="the last day of February" placement="right">
-                  <span> February 28th (or 29th if it's a leap year) </span>
-                </Tooltip>
-              </li>
-              <li>
-                <Tooltip title="Pi day" placement="right">
-                  <span> March 14th </span>
-                </Tooltip>
-              </li>
-              <li>
-                <Tooltip title="4/4, 6/6, 8/8, 10/10, 12/12" placement="right">
-                  <span> April 4th </span>
-                </Tooltip>
-              </li>
-              <li>
-                <Tooltip title="I work 9-to-5 at 7-11" placement="right">
-                  <span> May 9th </span>
-                </Tooltip>
-              </li>
-              <li>
-                <Tooltip title="4/4, 6/6, 8/8, 10/10, 12/12" placement="right">
-                  <span> June 6th </span>
-                </Tooltip>
-              </li>
-              <li>
-                <Tooltip title="I work 9-to-5 at 7-11" placement="right">
-                  <span> July 11th </span>
-                </Tooltip>
-              </li>
-              <li>
-                <Tooltip title="4/4, 6/6, 8/8, 10/10, 12/12" placement="right">
-                  <span> August 8th </span>
-                </Tooltip>
-              </li>
-              <li>
-                <Tooltip title="I work 9-to-5 at 7-11" placement="right">
-                  <span> September 5th </span>
-                </Tooltip>
-              </li>
-              <li>
-                <Tooltip title="4/4, 6/6, 8/8, 10/10, 12/12" placement="right">
-                  <span> October 10th </span>
-                </Tooltip>
-              </li>
-              <li>
-                <Tooltip title="I work 9-to-5 at 7-11" placement="right">
-                  <span> November 7th </span>
-                </Tooltip>
-              </li>
-              <li>
-                <Tooltip title="4/4, 6/6, 8/8, 10/10, 12/12" placement="right">
-                  <span> December 12th </span>
-                </Tooltip>
-              </li>
-            </ul>
+            <p>
+              A number is a multiple of 4 if its last two digits are a multiple
+              of 4
+            </p>
+            <p style={{ textIndent: "50px" }}>
+              {" "}
+              e.g. The last two digits of{" "}
+              <Tooltip title="16 = 4 x 4" placement="top">
+                <span>
+                  20<u>16</u>
+                </span>
+              </Tooltip>
+              ,{" "}
+              <Tooltip title="84 = 4 x 21" placement="top">
+                <span>
+                  19<u>84</u>
+                </span>
+              </Tooltip>
+              ,{" "}
+              <Tooltip title="36 = 4 x 9" placement="top">
+                <span>
+                  18<u>36</u>
+                </span>
+              </Tooltip>{" "}
+              are all multiples of 4
+            </p>
+            <p>A number is a multiple of 100 if its last two digits are 00</p>
+            <p style={{ textIndent: "50px" }}>
+              {" "}
+              e.g. The last two digits of{" "}
+              <Tooltip title="1700 = 17 x 100" placement="top">
+                <span>
+                  17<u>00</u>
+                </span>
+              </Tooltip>
+              ,{" "}
+              <Tooltip title="1800 = 18 x 100" placement="top">
+                <span>
+                  18<u>00</u>
+                </span>
+              </Tooltip>
+              ,{" "}
+              <Tooltip title="1900 = 19 x 100" placement="top">
+                <span>
+                  19<u>00</u>
+                </span>
+              </Tooltip>{" "}
+              are all 00
+            </p>
+            <p>
+              A number is a multiple of 400 if it is also a multiple of 100 and
+              everything but its last two digits are a multiple of 4
+            </p>
+            <p style={{ textIndent: "50px" }}>
+              {" "}
+              e.g. Everything but the last two digits of{" "}
+              <Tooltip title="20 = 4 x 5" placement="top">
+                <span>
+                  <u>20</u>00
+                </span>
+              </Tooltip>
+              ,{" "}
+              <Tooltip title="24 = 4 x 6" placement="top">
+                <span>
+                  <u>24</u>00
+                </span>
+              </Tooltip>
+              ,{" "}
+              <Tooltip title="16 = 4 x 4" placement="top">
+                <span>
+                  <u>16</u>00
+                </span>
+              </Tooltip>{" "}
+              are all multiples of 4
+            </p>
           </div>
         </div>
 
@@ -193,21 +189,22 @@ const Slides = () => {
           <div className="Slide-paragraph-block">
             <h2 style={{ color: "black" }}>
               <b>
-                <u>Doomsdays</u>
+                <u>Leap Day</u>
               </b>
             </h2>
             <p>
               {" "}
-              Observe that the doomsdays always fall on the same day of the week
-              for any given year:{" "}
+              Observe that the last day of February is the 29th on leap years
+              and 28th otherwise:{" "}
             </p>
             <Calendar
               minDate={new Date(1700, 0, 1)}
               view="month"
+              value={new Date(currentYear, 1, 1)}
               showNeighboringMonth={false}
               tileDisabled={({ activeStartDate, date, view }) => {
-                const doomsdays = getDoomsdays(date.getFullYear());
-                return !(doomsdays[date.getMonth()] === date.getDate());
+                const leapDay = isLeapYear(date.getFullYear()) ? 29 : 28;
+                return !(date.getMonth() === 1 && date.getDate() === leapDay);
               }}
             />
           </div>
@@ -281,4 +278,4 @@ const Slides = () => {
   );
 };
 
-export default Slides;
+export default Step2Slides;

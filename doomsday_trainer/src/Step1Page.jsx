@@ -1,9 +1,9 @@
-import Slides from "./slides/Slides";
+import Step1Slides from "./slides/Step1Slides";
 
 const Step1Page = () => {
   return (
     <div className="General-app-text-content App-page-with-bar">
-      <Slides />;
+      <Step1Slides />;
     </div>
   );
 };

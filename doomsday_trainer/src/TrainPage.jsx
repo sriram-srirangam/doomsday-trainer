@@ -20,7 +20,8 @@ const TrainPage = () => {
 
   return (
     <div className="General-app-content App-page-with-bar">
-      <p>Practice makes perfect</p>
+      {/* <p>Practice makes perfect</p> */}
+      <p>Dates are of the format: MM/DD/YYYY</p>
       <p>
         Date: {date[0]}/{date[1]}/{date[2]}
       </p>
