@@ -9,6 +9,7 @@ import Step1Page from "./Step1Page";
 import Step2Page from "./Step2Page";
 import Step3Page from "./Step3Page";
 import Step4Page from "./Step4Page";
+import Step5Page from "./Step5Page";
 
 const LearnSections = () => {
   let match = useRouteMatch();
@@ -26,6 +27,9 @@ const LearnSections = () => {
         </Route>
         <Route path={`${match.path}/step4`}>
           <Step4Page />
+        </Route>
+        <Route path={`${match.path}/step5`}>
+          <Step5Page />
         </Route>
         <Route path={match.path}>
           <TableOfContents className="App-page-with-bar" />
