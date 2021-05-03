@@ -4,7 +4,7 @@ import Tooltip from "@material-ui/core/Tooltip";
 
 import Calendar from "react-calendar";
 
-import { computeDayOfWeek, isLeapYear } from "../utils.js";
+import { computeDayOfWeek } from "../utils.js";
 
 const Step2Slides = () => {
   const [slideIndex, setSlideIndex] = useState(0);

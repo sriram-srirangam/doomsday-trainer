@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 
-import { allDays, computeDayOfWeek } from "../utils.js";
+import { computeDayOfWeek } from "../utils.js";
 
 const Step3Slides = () => {
   const [slideIndex, setSlideIndex] = useState(0);
