@@ -29,6 +29,10 @@ const AboutPage = () => {
           etc. Returning users who have already completed the previous mode will
           want to go here.{" "}
         </p>
+        <p>
+          Knowledge of basic arithmetic is sufficient to use this app and learn
+          the algorithm.
+        </p>
       </div>
     </div>
   );
