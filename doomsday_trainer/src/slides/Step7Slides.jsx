@@ -72,7 +72,10 @@ const Step2Slides = () => {
                 <u>How the Doomsday changes across years</u>
               </b>
             </h2>
-            <p>Consider the following doomsday date: August 8th, 1900</p>
+            <p>
+              Consider the following date that falls on Doomsday: August 8th,
+              1900
+            </p>
             <p style={{ textIndent: "50px" }}>
               From the memorized anchor doomsdays, one knows that this date fell
               on a Wednesday
