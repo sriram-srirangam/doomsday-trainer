@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/doomsday-trainer/static/css/main.48d9cf8c.chunk.css",
+    "main.js": "/doomsday-trainer/static/js/main.46c2bd25.chunk.js",
+    "main.js.map": "/doomsday-trainer/static/js/main.46c2bd25.chunk.js.map",
+    "runtime-main.js": "/doomsday-trainer/static/js/runtime-main.45f694b4.js",
+    "runtime-main.js.map": "/doomsday-trainer/static/js/runtime-main.45f694b4.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/doomsday-trainer/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.4dd7e2ca.chunk.js": "/doomsday-trainer/static/js/2.4dd7e2ca.chunk.js",
+    "static/js/2.4dd7e2ca.chunk.js.map": "/doomsday-trainer/static/js/2.4dd7e2ca.chunk.js.map",
+    "static/js/3.8c63acd9.chunk.js": "/doomsday-trainer/static/js/3.8c63acd9.chunk.js",
+    "static/js/3.8c63acd9.chunk.js.map": "/doomsday-trainer/static/js/3.8c63acd9.chunk.js.map",
+    "index.html": "/doomsday-trainer/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/doomsday-trainer/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.48d9cf8c.chunk.css.map": "/doomsday-trainer/static/css/main.48d9cf8c.chunk.css.map",
+    "static/js/2.4dd7e2ca.chunk.js.LICENSE.txt": "/doomsday-trainer/static/js/2.4dd7e2ca.chunk.js.LICENSE.txt",
+    "static/media/doomsday_logo.c3df842e.png": "/doomsday-trainer/static/media/doomsday_logo.c3df842e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.45f694b4.js",
+    "static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.4dd7e2ca.chunk.js",
+    "static/css/main.48d9cf8c.chunk.css",
+    "static/js/main.46c2bd25.chunk.js"
+  ]
+}
