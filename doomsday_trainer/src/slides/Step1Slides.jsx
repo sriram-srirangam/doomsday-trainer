@@ -88,7 +88,7 @@ const Step1Slides = () => {
               </Tooltip>
             </p>
             <p>
-              We can think of other days where the day of the week matches the
+              One can think of other days where the day of the week matches the
               Doomsday for a year as also being doomsdays
             </p>
             <p style={{ textIndent: "50px" }}>
