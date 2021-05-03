@@ -76,8 +76,7 @@ const Step4Slides = () => {
               year
             </p>
             <p>
-              This requires that one has the doomsdays in each month memorized
-              (see{" "}
+              This requires having the doomsdays in each month memorized (see{" "}
               <a href="step1" style={{ textDecoration: "none" }}>
                 Doomsdays
               </a>

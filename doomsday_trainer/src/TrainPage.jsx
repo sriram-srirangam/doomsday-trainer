@@ -47,7 +47,7 @@ const TrainPage = () => {
                 alert("CORRECT!");
               } else {
                 setScore(0);
-                alert(`INCORRECT!\nThe correct answer is: ${day}.`);
+                alert(`INCORRECT!\nThe correct answer is: ${day}`);
               }
 
               const newDate = getRandDate();

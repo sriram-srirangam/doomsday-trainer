@@ -159,11 +159,11 @@ const Step2Slides = () => {
             </p>
             <p>
               A number is a multiple of 400 if it is also a multiple of 100 and
-              everything but its last two digits are a multiple of 4
+              all but its last two digits are a multiple of 4
             </p>
             <p style={{ textIndent: "50px" }}>
               {" "}
-              e.g. Everything but the last two digits of{" "}
+              e.g. All but the last two digits of{" "}
               <Tooltip title="20 = 4 x 5" placement="top">
                 <span>
                   <u>20</u>00

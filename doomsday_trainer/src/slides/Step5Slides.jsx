@@ -112,9 +112,9 @@ const Step5Slides = () => {
               for that year
             </p>
             <p>
-              A special case of this is particularly useful: with knowledge of
-              just today's date, one can calculate the day of the week for any
-              date in the current year!
+              This gives a particularly useful corollary: with knowledge of just
+              today's date, one can calculate the day of the week for any date
+              in the current year!
             </p>
           </div>
         </div>

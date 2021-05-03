@@ -10,6 +10,8 @@ import Step2Page from "./Step2Page";
 import Step3Page from "./Step3Page";
 import Step4Page from "./Step4Page";
 import Step5Page from "./Step5Page";
+import Step6Page from "./Step6Page";
+import Step7Page from "./Step7Page";
 
 const LearnSections = () => {
   let match = useRouteMatch();
@@ -30,6 +32,12 @@ const LearnSections = () => {
         </Route>
         <Route path={`${match.path}/step5`}>
           <Step5Page />
+        </Route>
+        <Route path={`${match.path}/step6`}>
+          <Step6Page />
+        </Route>
+        <Route path={`${match.path}/step7`}>
+          <Step7Page />
         </Route>
         <Route path={match.path}>
           <TableOfContents className="App-page-with-bar" />
@@ -72,14 +80,13 @@ const TableOfContents = () => {
           </ul>
         </li>
         <li>
-          <strong>
-            Part 3: Compute the Doomsday for the year in the given date
-          </strong>
+          <strong>Part 3: Compute the Doomsday for any year</strong>
           <ul>
-            <LinkListItem text="TODO" urlPath="step6" />
-            <LinkListItem text="TODO" urlPath="step7" />
-            <LinkListItem text="TODO" urlPath="step8" />
-            <LinkListItem text="TODO" urlPath="step9" />
+            <LinkListItem text="Doomsdays for Anchor Years" urlPath="step6" />
+            <LinkListItem
+              text="Calculate Doomsday using the offset"
+              urlPath="step7"
+            />
           </ul>
         </li>
       </ol>

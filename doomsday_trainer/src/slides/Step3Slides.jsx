@@ -79,8 +79,8 @@ const Step3Slides = () => {
             </p>
             <p>
               There are seven days of the week that wrap back around to the
-              beginning at the end of each week, making arithmetic modulo 7 very
-              useful for calendar calculations
+              beginning after each week, making arithmetic modulo 7 very useful
+              for calendar calculations
             </p>
             <p>The Doomsday algorithm relies heavily on this property</p>
           </div>
@@ -190,13 +190,13 @@ const Step3Slides = () => {
                   (<u>why?</u>)
                 </span>
               </Tooltip>
-              , one can count 1 day after Sunday instead and determine that the
+              , one can instead count 1 day after Sunday and determine that the
               answer is Monday
             </p>
             <p>
               A similar approach works for counting backwards too, except with
               the sign changed: to find out what the day of the week is 50 days
-              before Sunday, one can just count -50 % 7 days after Sunday
+              before Sunday, one can just count 50 % 7 days before Sunday
               instead
             </p>
             <p style={{ textIndent: "50px" }}>
@@ -209,8 +209,8 @@ const Step3Slides = () => {
                   (<u>why?</u>)
                 </span>
               </Tooltip>
-              , one can count 1 day <i>before</i> Sunday instead and determine
-              that the answer is Saturday
+              , one can instead count 1 day before Sunday and determine that the
+              answer is Saturday
             </p>
             <p>A few more examples:</p>
             <p style={{ textIndent: "50px" }}>

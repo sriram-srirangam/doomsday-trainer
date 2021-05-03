@@ -56,7 +56,7 @@ const Step1Slides = () => {
             <p>
               {" "}
               Every year has a specific day of the week, known as{" "}
-              <b>Doomsday</b> that can help simplify the way we can think about
+              <b>Doomsday</b> that can help simplify the way one can think about
               the calendar{" "}
             </p>
             <p>
@@ -65,12 +65,27 @@ const Step1Slides = () => {
               of February falls on{" "}
             </p>
             <p style={{ textIndent: "50px" }}>
-              e.g. the Doomsday for 2021 is Sunday (since February 28th, 2021
-              was a Sunday)
+              e.g. the Doomsday for 2021 is{" "}
+              <Tooltip
+                title="(since February 28th, 2021
+              was a Sunday)"
+                placement="right"
+              >
+                <span>
+                  <u>Sunday</u>
+                </span>
+              </Tooltip>
             </p>
             <p style={{ textIndent: "50px" }}>
-              e.g. similarly, the Doomsday for 2020 is Saturday (since February
-              29th, 2020 was a Saturday)
+              e.g. similarly, the Doomsday for 2020 is{" "}
+              <Tooltip
+                title="(since February 29th, 2020 was a Saturday)"
+                placement="right"
+              >
+                <span>
+                  <u>Saturday</u>
+                </span>
+              </Tooltip>
             </p>
             <p>
               We can think of other days where the day of the week matches the
@@ -78,7 +93,7 @@ const Step1Slides = () => {
             </p>
             <p style={{ textIndent: "50px" }}>
               {" "}
-              e.g. this means that every Sunday in 2021 is a doomsday{" "}
+              e.g. this means that <b>every</b> Sunday in 2021 is a doomsday{" "}
             </p>
             <p>
               {" "}
