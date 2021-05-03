@@ -211,7 +211,7 @@ const Step2Slides = () => {
           <div className="Slide-paragraph-block">
             <h2 style={{ color: "black" }}>
               <b>
-                <u>Leap Day</u>
+                <u>Doomsday Advancing</u>
               </b>
             </h2>
             <p>
