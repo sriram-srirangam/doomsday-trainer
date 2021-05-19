@@ -35,4 +35,4 @@ while True:
     input(f"Date: {date[0]}/{date[1]}/{date[2]}")
     end = time.time()
     print(f"{end - start} s")
-    input(f"Answer is: {compute_day_of_week(*date)}")
+    input(f"Answer is: {compute_day_of_week(*date)}\n")
