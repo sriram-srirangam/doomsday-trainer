@@ -27,7 +27,7 @@ function App() {
     <Router basename="/">
       <Routes>
         <Route
-          path="learn/*"
+          path="/learn/*"
           element={
             <>
               {appHeader} <LearnSections />
@@ -35,7 +35,7 @@ function App() {
           }
         />
         <Route
-          path="train"
+          path="/train"
           element={
             <>
               {appHeader} <TrainPage />
@@ -43,7 +43,7 @@ function App() {
           }
         />
         <Route
-          path="about"
+          path="/about"
           element={
             <>
               {appHeader} <AboutPage />

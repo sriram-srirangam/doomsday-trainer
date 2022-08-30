@@ -17,7 +17,7 @@ const HomePage = () => {
           <img src={logo} className="App-logo" alt="logo" />
         </a>
         <p>Become a human calendar</p>
-        <Link to="learn" style={{ textDecoration: "none" }}>
+        <Link to="/learn" style={{ textDecoration: "none" }}>
           <Tooltip title="Learn the theory" placement="right">
             <Button
               variant="outlined"
@@ -28,14 +28,14 @@ const HomePage = () => {
             </Button>
           </Tooltip>
         </Link>
-        <Link to="train" style={{ textDecoration: "none" }}>
+        <Link to="/train" style={{ textDecoration: "none" }}>
           <Tooltip title="Practice the Algorithm" placement="right">
             <Button variant="outlined" size="large">
               Train
             </Button>
           </Tooltip>
         </Link>
-        <Link to="about" style={{ textDecoration: "none" }}>
+        <Link to="/about" style={{ textDecoration: "none" }}>
           <Tooltip title="About" placement="left">
             <HelpOutlineIcon
               fontSize="large"
