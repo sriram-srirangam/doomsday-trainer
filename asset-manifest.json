@@ -1,26 +1,16 @@
 {
   "files": {
-    "main.css": "/doomsday-trainer/static/css/main.48d9cf8c.chunk.css",
-    "main.js": "/doomsday-trainer/static/js/main.06c80044.chunk.js",
-    "main.js.map": "/doomsday-trainer/static/js/main.06c80044.chunk.js.map",
-    "runtime-main.js": "/doomsday-trainer/static/js/runtime-main.45f694b4.js",
-    "runtime-main.js.map": "/doomsday-trainer/static/js/runtime-main.45f694b4.js.map",
-    "static/css/2.4c97ca4f.chunk.css": "/doomsday-trainer/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.4dd7e2ca.chunk.js": "/doomsday-trainer/static/js/2.4dd7e2ca.chunk.js",
-    "static/js/2.4dd7e2ca.chunk.js.map": "/doomsday-trainer/static/js/2.4dd7e2ca.chunk.js.map",
-    "static/js/3.8c63acd9.chunk.js": "/doomsday-trainer/static/js/3.8c63acd9.chunk.js",
-    "static/js/3.8c63acd9.chunk.js.map": "/doomsday-trainer/static/js/3.8c63acd9.chunk.js.map",
+    "main.css": "/doomsday-trainer/static/css/main.0af733e1.css",
+    "main.js": "/doomsday-trainer/static/js/main.2f72d827.js",
+    "static/js/787.d6241ee1.chunk.js": "/doomsday-trainer/static/js/787.d6241ee1.chunk.js",
+    "static/media/doomsday_logo.png": "/doomsday-trainer/static/media/doomsday_logo.c3df842e3f4639ff7679.png",
     "index.html": "/doomsday-trainer/index.html",
-    "static/css/2.4c97ca4f.chunk.css.map": "/doomsday-trainer/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.48d9cf8c.chunk.css.map": "/doomsday-trainer/static/css/main.48d9cf8c.chunk.css.map",
-    "static/js/2.4dd7e2ca.chunk.js.LICENSE.txt": "/doomsday-trainer/static/js/2.4dd7e2ca.chunk.js.LICENSE.txt",
-    "static/media/doomsday_logo.c3df842e.png": "/doomsday-trainer/static/media/doomsday_logo.c3df842e.png"
+    "main.0af733e1.css.map": "/doomsday-trainer/static/css/main.0af733e1.css.map",
+    "main.2f72d827.js.map": "/doomsday-trainer/static/js/main.2f72d827.js.map",
+    "787.d6241ee1.chunk.js.map": "/doomsday-trainer/static/js/787.d6241ee1.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.45f694b4.js",
-    "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.4dd7e2ca.chunk.js",
-    "static/css/main.48d9cf8c.chunk.css",
-    "static/js/main.06c80044.chunk.js"
+    "static/css/main.0af733e1.css",
+    "static/js/main.2f72d827.js"
   ]
 }
