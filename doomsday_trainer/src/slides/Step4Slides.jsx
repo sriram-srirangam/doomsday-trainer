@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import TextField from "@material-ui/core/TextField";
 import Tooltip from "@material-ui/core/Tooltip";
+import { Link } from "react-router-dom";
 
 import { computeDayOfWeek, addLeadingZero } from "../utils.js";
 
@@ -77,9 +78,9 @@ const Step4Slides = () => {
             </p>
             <p>
               This requires having the doomsdays in each month memorized (see{" "}
-              <a href="step1" style={{ textDecoration: "none" }}>
+              <Link to="../step1" style={{ textDecoration: "none" }}>
                 Doomsdays
-              </a>
+              </Link>
               )
             </p>
             <p>

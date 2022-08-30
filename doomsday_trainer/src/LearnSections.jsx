@@ -1,10 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-} from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import Step1Page from "./Step1Page";
 import Step2Page from "./Step2Page";
 import Step3Page from "./Step3Page";
@@ -14,36 +8,20 @@ import Step6Page from "./Step6Page";
 import Step7Page from "./Step7Page";
 
 const LearnSections = () => {
-  let match = useRouteMatch();
   return (
-    <Router>
-      <Switch>
-        <Route path={`${match.path}/step1`}>
-          <Step1Page />
-        </Route>
-        <Route path={`${match.path}/step2`}>
-          <Step2Page />
-        </Route>
-        <Route path={`${match.path}/step3`}>
-          <Step3Page />
-        </Route>
-        <Route path={`${match.path}/step4`}>
-          <Step4Page />
-        </Route>
-        <Route path={`${match.path}/step5`}>
-          <Step5Page />
-        </Route>
-        <Route path={`${match.path}/step6`}>
-          <Step6Page />
-        </Route>
-        <Route path={`${match.path}/step7`}>
-          <Step7Page />
-        </Route>
-        <Route path={match.path}>
-          <TableOfContents className="App-page-with-bar" />
-        </Route>
-      </Switch>
-    </Router>
+    <Routes>
+      <Route path={"/step1"} element={<Step1Page />} />
+      <Route path={"/step2"} element={<Step2Page />} />
+      <Route path={"/step3"} element={<Step3Page />} />
+      <Route path={"/step4"} element={<Step4Page />} />
+      <Route path={"/step5"} element={<Step5Page />} />
+      <Route path={"/step6"} element={<Step6Page />} />
+      <Route path={"/step7"} element={<Step7Page />} />
+      <Route
+        path={"/"}
+        element={<TableOfContents className="App-page-with-bar" />}
+      />
+    </Routes>
   );
 };
 
