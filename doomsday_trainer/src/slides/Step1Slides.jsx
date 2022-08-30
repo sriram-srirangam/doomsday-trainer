@@ -8,7 +8,6 @@ import { getDoomsdays, allMonths } from "../utils.js";
 
 const Step1Slides = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [test, setTest] = useState("");
   const [quizFieldValues, setQuizFieldValues] = useState([
     "",
     "",
@@ -249,7 +248,6 @@ const Step1Slides = () => {
                       newQuizFieldValues[index] = e.target.value;
 
                       setQuizFieldValues(newQuizFieldValues);
-                      setTest(e.target.value);
                     }}
                     id={month}
                     variant="outlined"

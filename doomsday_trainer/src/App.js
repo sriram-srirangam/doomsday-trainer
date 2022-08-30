@@ -6,7 +6,7 @@ import AboutPage from "./AboutPage";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
-import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Link, HashRouter as Router, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import "./slides/Slides.css";
@@ -16,9 +16,9 @@ function App() {
     <AppBar position="static">
       <Toolbar style={{ background: "DimGray" }}>
         <IconButton edge="start" color="inherit" aria-label="menu"></IconButton>
-        <a className="Info-link" href="/">
+        <Link className="Info-link" to="/">
           <img src={logo} width="203px" height="35px" alt="logo" />
-        </a>
+        </Link>
       </Toolbar>
     </AppBar>
   );

@@ -7,7 +7,6 @@ import { computeDayOfWeek, addLeadingZero } from "../utils.js";
 
 const Step4Slides = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [test, setTest] = useState("");
   const [quizFieldValues, setQuizFieldValues] = useState([
     "",
     "",
@@ -176,7 +175,6 @@ const Step4Slides = () => {
                       newQuizFieldValues[index] = e.target.value;
 
                       setQuizFieldValues(newQuizFieldValues);
-                      setTest(e.target.value);
                     }}
                     id={date}
                     variant="outlined"

@@ -8,7 +8,6 @@ import { computeDayOfWeek } from "../utils.js";
 
 const Step2Slides = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [test, setTest] = useState("");
   const [quizFieldValues, setQuizFieldValues] = useState([
     "",
     "",
@@ -261,7 +260,6 @@ const Step2Slides = () => {
                       newQuizFieldValues[index] = e.target.value;
 
                       setQuizFieldValues(newQuizFieldValues);
-                      setTest(e.target.value);
                     }}
                     id={year}
                     variant="outlined"
